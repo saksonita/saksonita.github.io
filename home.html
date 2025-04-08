@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saksonita Khoeurn - Professional Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Optional: Configure Tailwind (e.g., custom fonts, themes)
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              // Use 'Inter' font - loaded via Tailwind's default sans-serif stack
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              // Define some custom colors if needed
+              primary: '#007bff', // Example primary color
+              secondary: '#6c757d', // Example secondary color
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+        /* Add custom CSS here if needed, using @apply for Tailwind classes */
+
+        /* Style for publication links */
+        .publication-item a {
+            @apply text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200;
+        }
+
+        /* Add some spacing between job/education entries */
+        #experience > div, #education > div {
+             @apply mb-6; /* Margin bottom for spacing */
+        }
+
+        /* Offset content below the fixed navbar */
+        body {
+             @apply pt-16; /* Adjust padding-top to match navbar height */
+        }
+
+        /* Optional: Style for active nav link (requires JS to implement dynamically) */
+        /* .nav-link-active { */
+        /* @apply text-blue-600 font-semibold; */
+        /* } */
+
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+
+    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto max-w-4xl px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-lg font-semibold text-gray-800">
+                    <a href="#" class="hover:text-blue-600">Saksonita Khoeurn</a>
+                </div>
+
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">About</a>
+                    <a href="#experience" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Experience</a>
+                    <a href="#education" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Education</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Skills</a>
+                    <a href="#publications" class="text-gray-600 hover:text-blue-600 transition-colors duration-200">Publications</a>
+                    </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <a href="#about" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Experience</a>
+            <a href="#education" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Education</a>
+            <a href="#skills" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Skills</a>
+            <a href="#publications" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Publications</a>
+            </div>
+    </nav>
+
+    <div class="container mx-auto max-w-4xl px-4 py-8 md:py-12 pt-0">
+
+        <header class="bg-white shadow-md rounded-lg p-6 md:p-8 mb-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Saksonita Khoeurn</h1>
+            <p class="text-lg text-gray-600">Ph.D. Candidate | Data Scientist | Startup Enthusiast</p>
+        </header>
+
+        <section id="about" class="bg-white shadow-md rounded-lg p-6 md:p-8 mb-8 scroll-mt-16"> <h2 class="text-2xl font-semibold text-gray-900 border-b pb-2 mb-4">About Me</h2>
+            <div class="space-y-4 text-gray-700">
+                <p>
+                    I am a Ph.D. candidate at Chungbuk National University in South Korea, specializing in machine learning and deep learning. My research focuses on predictive maintenance, time series forecasting, and explainable AI.
+                </p>
+                <p>
+                    Beyond academia, I have extensive experience in startup development, having mentored early-stage startups and organized accelerator programs at Techo Startup Center in Cambodia. My background also includes teaching web development and working in digital marketing, where I managed client projects and produced high-quality content.
+                </p>
+                <p>
+                    With a strong foundation in computer science, I am passionate about using technology to solve real-world problems and support innovation.
+                </p>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+
+            <section id="experience" class="bg-white shadow-md rounded-lg p-6 md:p-8 md:col-span-2 scroll-mt-16"> <h2 class="text-2xl font-semibold text-gray-900 border-b pb-2 mb-6">Work Experience</h2>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Data Scientist</h3>
+                    <p class="text-gray-600 mb-1"><strong>Big Datalabs</strong> | July 2024 - Present</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Leveraging advanced data analytics and machine learning techniques to drive insights.</li>
+                        <li>Developing predictive models and optimizing business processes.</li>
+                        <li>Contributing to data-driven decision-making within the organization.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Ph.D. Candidate</h3>
+                    <p class="text-gray-600 mb-1"><strong>Chungbuk National University, South Korea</strong> | 2021 - 2025</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Researching machine learning and AI for predictive maintenance and healthcare.</li>
+                        <li>Utilizing deep learning and explainable AI for semiconductor manufacturing.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Startup Development Specialist</h3>
+                    <p class="text-gray-600 mb-1"><strong>Techo Startup Center, Cambodia</strong> | 2019 - 2021</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Led and organized national startup programs and accelerator initiatives.</li>
+                        <li>Mentored startups and facilitated connections with relevant industry mentors.</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-gray-800">University Lecturer</h3>
+                    <p class="text-gray-600 mb-1"><strong>Norton University, Cambodia</strong> | 2018 - 2019</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Taught courses in Web Application Development and MS SQL Server.</li>
+                        <li>Guided students through technical concepts and practical applications.</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Assistant Digital Marketing Manager</h3>
+                    <p class="text-gray-600 mb-1"><strong>Westec Media Limited, Cambodia</strong> | 2018</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Managed client relationships and coordinated project resources.</li>
+                        <li>Planned and executed marketing campaigns with a focus on analytics.</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-gray-800">Information Communication Officer</h3>
+                    <p class="text-gray-600 mb-1"><strong>NGO Education Partnership, Cambodia</strong> | 2018</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Developed content and managed communications for newsletters and events.</li>
+                        <li>Resolved IT and communication issues for staff and members.</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-xl font-semibold text-gray-800">IT Instructor</h3>
+                    <p class="text-gray-600 mb-1"><strong>Korea Software HRD Center, Cambodia</strong> | 2015 - 2016</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                        <li>Taught IT courses and mentored students in academic and personal growth.</li>
+                        <li>Designed and implemented lesson plans and assessments.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <div class="space-y-8">
+                <section id="education" class="bg-white shadow-md rounded-lg p-6 scroll-mt-16"> <h2 class="text-2xl font-semibold text-gray-900 border-b pb-2 mb-6">Education</h2>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Master's Degree in ICT Convergence</h3>
+                        <p class="text-gray-600 mb-1"><strong>Handong Global University, South Korea</strong> | 2016 - 2017</p>
+                        <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>Received the Best Supporter Award in the Program.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800">Bachelor's Degree in Computer Science</h3>
+                        <p class="text-gray-600 mb-1"><strong>Norton University, Cambodia</strong> | 2010 - 2015</p>
+                         <ul class="list-disc list-inside text-gray-700 text-sm">
+                            <li>Ranked No. 1 in the first semester of senior year.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="skills" class="bg-white shadow-md rounded-lg p-6 scroll-mt-16"> <h2 class="text-2xl font-semibold text-gray-900 border-b pb-2 mb-6">Skills & Certificates</h2>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Technical Skills</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">PyTorch</span>
+                            <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">TensorFlow</span>
+                            <span class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">Python</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">Flask</span>
+                            <span class="bg-purple-100 text-purple-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full">Streamlit</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Certificates</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 text-sm">
+                            <li>GET 2016 UNITWIN</li>
+                            <li>Cambridge FinTech and Regulatory Innovation 2017</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <section id="publications" class="bg-white shadow-md rounded-lg p-6 md:p-8 mb-8 scroll-mt-16"> <h2 class="text-2xl font-semibold text-gray-900 border-b pb-2 mb-6">Publications</h2>
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">First Author:</h3>
+            <ul class="space-y-3 text-gray-700">
+                <li class="publication-item">
+                    "AKN: Cambodia News Integration Service", The 2016 International Conference on BigDas, ISSN 2466-135X, Vol 2, No.1, pages 100-105.
+                </li>
+                <li class="publication-item">
+                    "Sentiment Analysis Engine for Cambodian Music Industry Rebuilding." 한국시뮬레이션학회 논문지 (Journal of Simulation).
+                    <a href="http://doi.org/10.9709/JKSS.2017.26.4.023/1225-5904" target="_blank">DOI: 10.9709/JKSS.2017.26.4.023/1225-5904</a>
+                </li>
+                 <li class="publication-item">
+                    "Barriers to E-commerce Business Model in Cambodia: A Case Study," Asia Pacific Business Review.
+                    <a href="http://dx.doi.org/10.20522/APIBR.2017.2.1.87" target="_blank">DOI: 10.20522/APIBR.2017.2.1.87</a>
+                </li>
+                <li class="publication-item">
+                    "A Comparison of Time Series Forecast Models for Predicting the Outliers Particles in Semiconductor Cleanroom," The Journal of Korean Institute of Information Technology, 2022.11, pages 137-146.
+                    <a href="https://doi.org/10.14801/jkilt.2022.20.11.137" target="_blank">DOI: 10.14801/jkilt.2022.20.11.137</a>
+                </li>
+                 <li class="publication-item">
+                    "AI Model Development and Validation for Predicting the Inbound Quantity of Chamoe (Korean Melon)," 한국컴퓨터정보학회 논문지 (Journal of Korean Computer Information Society), Vol. 28, No. 7, 2023, pages 29-37.
+                    <a href="https://doi.org/10.9708/jksci.2023.28.07.029" target="_blank">DOI: 10.9708/jksci.2023.28.07.029</a>
+                </li>
+                </ul>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12">
+             <p>&copy; <span id="currentYear"></span> Saksonita Khoeurn. All rights reserved.</p>
+        </footer>
+
+    </div> <script>
+        // Update Copyright Year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Mobile Menu Toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Close mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
