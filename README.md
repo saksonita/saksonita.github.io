@@ -51,13 +51,6 @@ The portfolio is fully responsive and optimized for:
 - GitHub: [saksonita](https://github.com/saksonita)
 - Hugging Face: [saksonita](https://huggingface.co/saksonita)
 
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🤝 Contributing
-
-Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
 ## 📬 Contact
 
