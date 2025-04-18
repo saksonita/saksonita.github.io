@@ -1,0 +1,27 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- White background -->
+  <rect width="300" height="200" fill="white" />
+  
+  <!-- Data visualization circular element -->
+  <circle cx="150" cy="100" r="70" fill="none" stroke="#E0F2FE" stroke-width="20" />
+  
+  <!-- Data visualization bar chart/wave element -->
+  <path d="M100,130 L110,90 L130,110 L150,70 L170,100 L190,80 L200,120" 
+        stroke="#0EA5E9" stroke-width="4" fill="none" />
+  
+  <!-- S shape incorporated into the data line -->
+  <path d="M90,90 C105,70 115,70 125,90 C135,110 115,120 125,130 C135,140 145,140 160,130" 
+        stroke="#1E293B" stroke-width="10" stroke-linecap="round" fill="none" />
+  
+  <!-- K shape incorporated into the data line -->
+  <path d="M170,70 L170,130" stroke="#1E293B" stroke-width="10" stroke-linecap="round" />
+  <path d="M170,100 L200,70" stroke="#1E293B" stroke-width="10" stroke-linecap="round" />
+  <path d="M170,100 L200,130" stroke="#1E293B" stroke-width="10" stroke-linecap="round" />
+  
+  <!-- Data points/nodes -->
+  <circle cx="110" cy="90" r="5" fill="#0284C7" />
+  <circle cx="130" cy="110" r="5" fill="#0284C7" />
+  <circle cx="150" cy="70" r="5" fill="#0284C7" />
+  <circle cx="170" cy="100" r="5" fill="#0284C7" />
+  <circle cx="190" cy="80" r="5" fill="#0284C7" />
+</svg>

@@ -70,11 +70,11 @@
 
         /* Navbar link styling */
         .nav-link {
-             @apply text-secondary hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium;
+             @apply text-neutral-dark hover:text-primary transition-colors duration-200 px-3 py-2 rounded-md text-sm font-medium border-b-2 border-transparent hover:border-primary;
         }
          /* Mobile Navbar link styling */
         .mobile-nav-link {
-             @apply block px-4 py-3 text-base font-medium text-secondary hover:bg-neutral hover:text-primary;
+             @apply block px-4 py-3 text-base font-medium text-neutral-dark hover:bg-primary-light hover:text-primary transition-all duration-200;
         }
 
         /* Subtle hover effect for cards */
@@ -86,14 +86,14 @@
 </head>
 <body>
 
-    <nav class="bg-white shadow-md fixed top-0 left-0 right-0 z-50 border-b border-gray-200">
-        <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+    <nav class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50 border-b border-gray-100 backdrop-blur-sm bg-white/90">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0">
-                     <a href="#" class="text-xl font-bold text-neutral-dark hover:text-primary transition-colors duration-200">Saksonita Khoeurn</a>
-                </div>
+                    <a href="#" class="text-xl font-bold text-primary hover:text-primary-dark transition-colors duration-200">SK</a>
+               </div>
 
-                <div class="hidden md:flex items-center space-x-1">
+                <div class="hidden md:flex items-center space-x-4">
                      <a href="#about" class="nav-link">About</a>
                      <a href="#experience" class="nav-link">Experience</a>
                      <a href="#education" class="nav-link">Education</a>
@@ -102,7 +102,7 @@
                  </div>
 
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-secondary hover:text-neutral-dark hover:bg-neutral focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-neutral-dark hover:text-primary hover:bg-primary-light/50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary transition-colors duration-200" aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <svg id="icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -126,7 +126,7 @@
         </div>
     </nav>
 
-    <div class="container mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-8 md:py-12 pt-0">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 md:py-12 pt-0">
 
         <header class="flex flex-col md:flex-row items-center text-center md:text-left mb-12 md:mb-16 pt-8 md:pt-12">
             <div class="flex-shrink-0 mb-6 md:mb-0 md:mr-8">
@@ -145,22 +145,89 @@
 
         <section id="about" class="card mb-10 scroll-mt-16">
             <h2 class="section-heading">About Me</h2>
-            <div class="space-y-4 text-secondary leading-relaxed">
-                <p>
-                    I am a Ph.D. candidate at Chungbuk National University in South Korea, specializing in machine learning and deep learning. My research focuses on predictive maintenance, time series forecasting, and explainable AI, particularly within semiconductor manufacturing and healthcare domains.
+            
+            <!-- Hero statement with accent styling -->
+            <div class="mb-8 border-l-4 border-primary pl-4 py-2 bg-primary-light bg-opacity-50 rounded">
+                <p class="text-lg font-medium text-neutral-dark">
+                    As a Data Scientist at Big Data Labs with a Ph.D. in Engineering, I blend cutting-edge machine learning expertise with business acumen to create data-driven solutions that make a real difference.
                 </p>
-                <p>
-                    Beyond academia, I have extensive experience in startup development, having mentored early-stage startups and organized accelerator programs at Techo Startup Center in Cambodia. My background also includes teaching web development and working in digital marketing, where I managed client projects and produced high-quality content.
-                </p>
-                <p>
-                    With a strong foundation in computer science, I am passionate about leveraging technology to solve real-world problems and drive innovation.
-                </p>
+            </div>
+            
+            <!-- Grid layout with icons for key areas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <!-- Research Focus -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-neutral-dark mb-2">Research Focus</h3>
+                        <p class="text-secondary">
+                            With my Ph.D. from Chungbuk National University, my research in predictive maintenance and explainable AI is transforming industries' approach to semiconductor manufacturing and healthcare challenges.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Entrepreneurial Spirit -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-neutral-dark mb-2">Entrepreneurial Drive</h3>
+                        <p class="text-secondary">
+                            At Techo Startup Center, I've helped shape Cambodia's startup ecosystem by mentoring emerging companies and designing impactful accelerator programs that bridge academic research with business applications.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Technical Expertise -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-neutral-dark mb-2">Technical Expertise</h3>
+                        <p class="text-secondary">
+                            At Big Data Labs, I leverage advanced skills in machine learning, deep learning, and data analytics to develop sophisticated AI models that solve complex problems and provide actionable insights for organizations.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Educational Approach -->
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                            <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-neutral-dark mb-2">Knowledge Sharing</h3>
+                        <p class="text-secondary">
+                            As a former university lecturer and IT instructor, I'm passionate about teaching and mentoring the next generation of developers and data scientists to drive innovation forward.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quote/Testimonial section (optional) -->
+            <div class="bg-neutral rounded-lg p-6 border border-gray-200 italic text-center">
+                <p class="text-secondary mb-2">"My goal is to create solutions that bridge the gap between cutting-edge research and practical business applications that deliver real impact."</p>
             </div>
         </section>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-10">
 
-            <section id="experience" class="card lg:col-span-2 scroll-mt-16 card-hover">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 mb-10">
+
+            <section id="experience" class="card lg:col-span-3 scroll-mt-16 card-hover">
                 <h2 class="section-heading">Work Experience</h2>
                 <div class="space-y-8">
                     <div>
@@ -223,7 +290,7 @@
                 </div>
             </section>
 
-            <div class="space-y-10">
+            <div class="space-y-10 lg:col-span-1">
                 <section id="education" class="card scroll-mt-16 card-hover">
                     <h2 class="section-heading">Education</h2>
                     <div class="space-y-6">
@@ -231,14 +298,14 @@
                             <h3 class="text-lg font-semibold text-neutral-dark">Ph.D in Engineering</h3>
                             <p class="text-secondary mb-1"><strong>Chungbuk National University, South Korea</strong> | 2021 - 2025</p>
                             <ul class="list-disc list-inside text-secondary text-sm pl-2">
-                                <li>Received the Best Supporter Award in the Program.</li>
+                                <li>Major in Big Data. Received GPA 4.23/4.5</li>
                             </ul>
                         </div>
                         <div>
                             <h3 class="text-lg font-semibold text-neutral-dark">Master's Degree in ICT Convergence</h3>
                             <p class="text-secondary mb-1"><strong>Handong Global University, South Korea</strong> | 2016 - 2017</p>
                             <ul class="list-disc list-inside text-secondary text-sm pl-2">
-                                <li>Major in Big Data. Received GPA 4.23/4.5</li>
+                                <li>Received the Best Supporter Award in the Program.</li>
                             </ul>
                         </div>
                         <div>
